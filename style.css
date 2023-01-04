@@ -1,7 +1,655 @@
-@import url(<link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">);
-
-h1{
+body {
     font-family: 'Raleway', sans-serif ;
+    margin:0
 }
+
+/* box-sizing = pour dire que je souhaite inclure les marges internes et les bordures dans le calcul de 
+la taille d’un élément.
+    -> border-box = les dimensions définies pour l’élément vont s’appliquer à la boite contenant le 
+       contenu + le padding + les bordures. En ajoutant ou en augmentant la taille des marges internes
+       ou des bordures, la taille de l’élément ne change pas mais son contenu sera compressé.  */
+
+    *{box-sizing: border-box;}
+
+/* taille de 1 400px et marges pour chaque blocs héb et act afin de garder mise en page correct */
+    .container {
+        max-width: 1400px;
+        margin : 0 auto;
+    }
+
+
+/* ========================================== HEADER =====================================================*/ 
+
+.navigation-bar {
+    display: flex; /* row par défaut */
+    justify-content: space-between; /* Je veux espacer les 2 blocs */
+    align-items: center; /* pour aligner boîte de droite sur l'axe vertical*/
+    flex-wrap:wrap;
+}
+
+/* Hébergements et Activités sur la même ligne : */
+.menu_navigation-bar {
+    display : flex;
+    list-style: none; /* suppression points liste */
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+}
+
+/* modification de la taille du logo */
+.logo {
+    height: 25px; /*hauteur*/
+}
+
+/* modification de la taille des list items car collés */
+    .navigation-bar li {
+        padding: 25px; /*dessus-droite-dessous-gauche*/
+    }
+
+    .item1-colorBlue_menu_navigation-bar {
+        color: #0065FC;
+    }
+
+    .item2-colorBlack_menu_navigation-bar {
+        color:black;
+    }
+
+    .navigation-bar a {
+        text-decoration: none;
+    }
+
+
+    .item1-borderBlue_menu_navigation-bar {
+        border-top: 2px #0065FC solid;
+    }
+
+/* Marges de nav - barre de navigation */
+ 
+.navigation-bar {
+    margin-right: 25px;
+    margin-left: 50px;
+}
+
+                                /* -------------- MAIN --------------- */
+
+.content-border {
+    margin:50px;
+ }
+ 
+ /* ========================================= SEARCH BANNER ============================================= */ 
+
+.search-banner {
+   display:flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+                            
+                            
+/* search-bar : barre de recherche, display pour mettre les éléments en ligne */
+                            
+    .search-bar_search-banner {
+        display: flex;
+                                    
+    }
+                                
+    .search-bar_search-banner {
+        padding-top:20px;
+    }
+                                
+    .search-field {
+        border: 1px solid #F2F2F2;
+        border-radius: 15px;
+    }
+                                
+                            
+/* Intégration de l'icône "location" au champs de recherche */
+                            
+    .location-icon_search-bar {
+        color: black;
+        font-size: 25px;
+        background: #F2F2F2;
+                                    
+    }   
+                                
+    .location-icon_search-bar {
+        margin: 2px;
+        margin: 0px;
+        padding: 12px 14px;
+        border-radius: 15px 0px 0px 14px;    
+    }
+ 
+/* intégration du bouton de recherche */    
+    .search-button_search-bar__search-banner {
+        height: 49px;
+        font-size: 14px;
+        padding-top: 3px;
+                                
+        border: none;
+        border-radius: 0px 15px 15px 0px;
+        color: white;
+        background-color: #0065FC;
+        font-weight: bold;
+        font-family: "Raleway", sans-serif;
+    }
+                            
+    .search-button-desktop-version{
+        width: 110px;
+    }
+                                
+    .search-icon-mobile-version {
+        color: white;
+    }
+                                
+/* superpositions des éléments composants le formulaire de recherche */
+.search-field {
+    display: flex;
+    justify-content: right;
+}
+                    
+/* superposition des boutons de la barre de recherche */
+                            
+    .search-bar_search-Banner {
+        position: relative;
+    }
+                                                    
+    .search-button-desktop-version {   
+        z-index: 1;
+    }
+                                                        
+    div.search-button-mobile-version {
+        position: absolute;
+    }
+                
+
+                          
+/* Mise en forme de l'input */ 
+                            
+    .search-field_search-bar {
+        height: 44px;
+        width: 100%;
+        font-size: 17px;
+        padding-left: 8px;
+        border:none;
+    }
+                                
+
+/* Propriétés de l'élément texte (lieu) de la barre de recherche */    
+    input.search-field_search-bar::placeholder {
+        color: black;
+        font-weight: bold;
+        font-family: "Raleway", sans-serif; 
+    }
+                            
+                            
+/*                                       search-filters                                                     */
+                                
+.search-filters_search-banner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+                            
+                            
+.search-filters_search-banner {
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap:10px;
+}
+                            
+.filter-buttonsx4_search-banner {
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+    justify-content: center;
+}
+                            
+.filter-button_search-banner {
+    display: flex;
+    align-items: center;
+}
+                            
+.filter-button_search-banner {
+    border: 2px solid #DCDCDC;
+    border-radius: 50px;
+    box-shadow: 2px 3px 3px #EAEDED;
+                            
+                               
+    min-height:35px;
+    width: 160px;
+    justify-content: center;
+}
+                            
+                            
+                            
+.filter-link {
+    text-decoration: none;
+    color: black;
+}
+                            
+.filter-link:hover {
+    border-radius: 50px;
+    background-color: #DEEBFF;
+}
+                            
+.filter-button-icon_search-banner {
+    margin-right: 10px;
+    margin-left: 8px;
+    color:#0065FC;
+}
+                            
+.info-icone {
+    margin-right: 10px;
+    margin-left: 8px;
+    color:#0065FC;
+}
+                            
+.filter-button_search-banner p {
+    margin-right: 5px;
+    font-size:78%;
+}
+                            
+/*                                       searchResultsInformation                                          */
+                            
+.search-results-information_search-banner {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.search-results-information-icon {
+    margin-bottom: 3px;
+}
+
+
+
+/* ======================================== SECTION 2 - HEB. ============================================= */
+
+/* Mise en place de la section 2 qui comprend Hébergements et Les + pop' : display car 2 blocs côte à côte, 
+flex car en ligne. GAP pour définir l'espacement entre les 2 items */
+
+    .background-grey-container { /* layout */
+        display: flex;
+        gap: 30px;
+    }
+
+/* Mise en forme des 2 items contenus dans la background-grey-container : couleur arrière plan, blanc tournant et les bords
+arrondis */
+
+    .background-grey {
+        background-color: #F2F2F2;
+        padding:30px 15px;
+        border-radius: 15px;
+    }
+
+/* application des proportions de chaque items (G et D) sur la ligne avec l'item de gauche 3 x plus grand
+que l'item de droite */
+
+    .background-grey.left {
+        flex-grow: 3;
+        
+    }
+
+    .background-grey.right {
+    flex-grow: 1;
+    justify-content: start;
+    
+    }
+
+/* création de la grille affichant les 6 cartes : flex pour les mettre en ligne, wrap afin de permettre
+un retour à la ligne quand la place vient à manquer puis align-times : stretch afin que les cartes s'étirent
+pour remplir le conteneur en respectant une width min et max. */
+
+    .grid2x3  {
+        display: flex;
+        flex-wrap: wrap;
+        align-items:stretch;
+    }
+
+/* marge-gauche sur "Héb" et "Afficher plus" pour les aligner avec la grid2x3 */
+
+    h3, 
+    h4 {
+        margin-left:19px;
+    }
+
+/* découpage de la grille en 6 espaces de tailles égales et proportionnelles à l'espace disponible (33%) */
+    .border {
+        width: 33%;
+    }
+
+/* Application des propriétés aux cartes contenues dans les 2 items de la background-grey-container : couleur arrière plan, la bordure blanche visible autour de l'image avec le padding, 
+les bords arrondis et l'effet d'ombre */
+
+    .card {
+        background-color: white;
+        padding:3px;
+        border-radius: 20px;
+        box-shadow: 10px 5px 5px #D7DBDD;
+        height: calc(100% - 20px);
+    }
+
+/* item de droite dans la section 2 / bloc gris droit */
+/* display flex afin de mettre le titre de l'item + logo sur la même ligne, space-between afin de les
+mettre aux extrémités du conteneur et align-items center afin de les aligner sur la même ligne */
+    .title-block_background-grey__right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+    }
+    
+    .icon-title-block_background-grey__right {
+        color: #0065FC;
+        padding-right: 15px;
+    }
+
+
+    /* CARTES */
+
+/* Application des propriétés à l'image des cartes : 
+- taille ;
+- objectif-fit pour déterminer la façon dont le contenu (l'image) doit s'apdater à son conteneur (card)
+ en utilisant sa largeur et sa hauteur : cover = Le contenu remplacé est dimensionné pour maintenir son 
+ ratio d'affichage tout en remplissant toute la boîte de contenu. La taille réelle est calculée pour couvrir 
+ la zone décrite par la hauteur et la largeur de l'élément. Si les ratios de l'objet et de la boîte ne 
+ correspondent pas, le contenu remplacé sera rogné. 
+
+- bordeur radius afin d'arrondir les angles supérieurs des images des cartes contenues dans le grid */
+    .card-img {
+        width: 100%;
+        height: 135px;
+        object-fit: cover;
+        border-radius: 17px 17px 0 0;
+    }
+
+/* blanc tournant de toutes les descriptions des cartes contenues dans la background-grey-container (blocs gris) ; display/
+column/space-between = conteneur cardText contient alors 1 item Text et un 1 item "étoiles" qu'on dispose
+en colonne afin de les positionner aux extrémités dudit conteneur  */
+    .card-text {
+        padding: 10px;
+    }
+
+    
+/* retrait des marges automatiques des titres des cartes afin de le Textes aient une disposion correcte */
+    .card-text h4 {
+        margin: 0px;
+    }
+
+/* marges afin de définir l'espacement entre le titre de cardText et les informations en dessous + taille*/    
+    .card-text p {
+        margin: 4px 0px;
+        font-size: 13px;
+    }
+    
+/* afin de rapprocher les 5 étoiles et leur définir une taille */    
+    .notation-icone-stars i {
+        margin :0;
+        font-size : 11px;
+        color:#0065FC
+    }
+
+/* étoile non sélectionées/grise */ 
+    .fa-grey.unselected-star {
+        color: #F2F2F2;
+    }
+
+/* retrait des propriétés par défaut des liens ajoutés à chaque carte de la page */
+    .card-link {
+        color: black;
+        text-decoration: none;
+    }
+
+    
+/* display pour mettre la liste des cartes en colonne ; taille et taille minimale définies sur le conteneur 
+des 3 cartes en colonne */
+
+    .card-column {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        min-width: 270px;
+    }
+    
+/* margin pour espacer les cartes et avoir les bonnes proportions par rapport au layout */
+    .card {
+        margin:10px;
+    }
+    
+/* display flex sur la lien car <a> a un comportement block ie que cardText se met sous cardImg par défaut */
+    .card-link.background-grey__right {
+        display: flex;
+    }
+ 
+/* propriété de l'image des cartes à droite (en ligne) : taille, hateur, taille max, bords gauches arrondis */
+    .card-img.background-grey__right {
+        width: 40%;
+        height:143px;
+        border-radius: 17px 0 0 17px;
+    }
+
+/* Display sur le bloc texte de la carte afin d'espacer les titres/§ des étoiles et les mettre aux opposés
+de laxe vertical du conteneur card-text.background-grey__right */
+    .card-text.background-grey__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+
+/* ======================================== SECTION 3 - ACT. ============================================= */ 
+
+.container.section3 {
+    margin: 40px auto;
+}
+
+.without-background-container h3 {
+    margin-left: 0;
+}
+
+/* display flex pour aligner les 4 cartes avec esapcement de 30px */
+    .card-rowx4 {
+        display: flex;
+        gap:35px;
+    }
+
+/* taille et custom de chaque carte */
+    .card-place_card-rowx4 {
+        width: 25%;
+        border-radius: 20px;
+        box-shadow: 10px 5px 5px #D7DBDD;
+    }
+
+/* propriétés des images contenues dans les cardPlace */
+    .card-img-place_card-rowx4 {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }
+
+/* alignement du Titre h4 de la section avec le conteneur qui contient les 4 items/cartes */
+    .without-background-container h4 {   
+    padding : 15px;
+    }
+
+/* positionnement du titre des cartes sous les images afin de les décaler légèrement */
+    .card-place_card-rowx4 h4 {
+        margin: 0 5px;
+    }
+
+
+                /* ------------------------- FOOTER --------------------------- */
+
+footer {
+    max-width: 1400px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: #F2F2F2;
+}
+
+.footer-items {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer h4 {
+    margin-left:0px;
+}
+
+                        /* --------------- MEDIA QUERIES --------------- */
+
+                            /*              TABLETTE               */
+
+@media (max-width: 992px) {
+
+    .item1-colorBlue_menu_navigation-bar {
+        color: unset;
+    }
+
+    .item1-borderBlue_menu_navigation-bar {
+        border-top:none;
+    }
+
+    .background-grey-container {
+        flex-direction: column;
+    }
+
+    .card-column {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card.background-grey__right {
+        width: 100%;
+    }
+    
+    .card-text {
+        padding: 5px;
+    }
+
+    .card-img.background-grey__right {
+        height: 143px;
+    }
+
+    .without-background-container h4 {   
+        padding : 11px;
+    }
+}
+
+
+                            /*               MOBILE             */
+
+                            
+@media (max-width: 768px) {
+
+    .menu_navigation-bar {
+        padding-left: 0;
+        width:100%;
+    }
+    
+    .logo {
+        margin: 35px;
+    }
+
+    .item2-colorBlack_menu_navigation-bar {
+        padding-right: 47px;
+    }
+
+    .navigation-bar {
+        flex-direction: column;
+        justify-content: center;
+
+        margin-left: unset;
+        margin-right: unset;
+    }
+
+    .navigation-bar li {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .item1-borderBlue_menu_navigation-bar {
+        border-top: unset;
+        border-bottom: 2px #0065FC solid;
+    }
+
+
+    .search-button-desktop-version {
+        z-index: 0;
+        position:absolute;
+        opacity:0
+    }
+
+    .search-button-mobile-version {
+        z-index:1;
+        width: 50px;
+    }
+
+    .filter-button_search-banner {
+        width: 213px;
+    }
+
+    .background-grey-container {
+        flex-direction: column-reverse;
+    }
+
+    .background-grey.left {
+        background-color: unset;
+        padding:unset;
+    }
+
+    .grid2x3 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-column {
+        flex-direction: column;
+    }
+
+    .card-rowx4 {
+        flex-direction: column;
+    }
+
+    .card-place_card-rowx4 {
+        width: unset;
+    }
+
+    h3,
+    h4 {
+        margin-left: unset;
+    }
+
+    .card {
+        margin:15px 0;
+    }
+
+    .border {
+        width: unset;
+    }
+
+    .card-img {
+        height:170px;
+    }
+
+    .card-img-place_card-rowx4 {
+        height: 170px;
+    }
+
+    footer {
+        margin: 0;
+    }
+
+    .footer-items {
+        flex-direction: column;
+    }
+
+    .footer-item {
+        padding-left:55px;
+    }
+
+}
+
+
+
